@@ -5,9 +5,9 @@ const noBtn = document.getElementById("no-btn");
 const msgLine1 = document.getElementById("message-line1");
 const msgLine2 = document.getElementById("message-line2");
 
-// paths to gifs (match filenames in static/img)
-const SAID_YES_GIF = "/static/img/said_yes.gif";
-const SAID_NO_GIF = "/static/img/said_no.gif";
+// paths to gifs (match exact filenames in static/img)
+const SAID_YES_GIF = "/static/img/said_yes.GIF";
+const SAID_NO_GIF  = "/static/img/said_no.gif";  // change to .GIF if file is said_no.GIF
 
 function clearMessage() {
   msgLine1.innerHTML = "";
@@ -21,12 +21,12 @@ yesBtn.addEventListener("click", () => {
   questionRow.style.display = "none";
 
   msgLine1.innerHTML = `
-    <span style="font-weight:bold;">I LOVEEE YOUUU BOOO!!! Lets make our first Valentine special </span>
+    <span style="font-weight:bold;">Yay!!! I knew it </span>
     <img src="/static/img/kiss_lips.png" class="icon-small">
   `;
 
   msgLine2.innerHTML = `
-    <span>Also lets get freaky on Valentines baby </span>
+    <span>Lets get freaky on Valentines </span>
     <img src="/static/img/smirk.png" class="icon-small">
     <img src="/static/img/devil.png" class="icon-small">
   `;
