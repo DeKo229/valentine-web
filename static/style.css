@@ -1,0 +1,82 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #ffd6ea; /* baby pink */
+}
+
+.container {
+  max-width: 520px;
+  margin: 10px auto;
+  text-align: center;
+  background-color: #ffd6ea;
+}
+
+.gif {
+  width: 360px;
+  height: 360px;
+  object-fit: cover;
+  margin-top: 10px;
+}
+
+.question-row {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+}
+
+.question-text {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.icon-small {
+  width: 26px;
+  height: 26px;
+}
+
+#message {
+  margin-top: 15px;
+  min-height: 60px;
+}
+
+#message-line1,
+#message-line2 {
+  margin: 4px 0;
+  font-size: 16px;
+}
+
+.buttons-row {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 8px 18px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.yes-btn {
+  background-color: #7CFC00; /* green */
+  color: black;
+}
+
+.no-btn {
+  background-color: #ff4d4d; /* red */
+  color: white;
+}
+
+.icon-btn {
+  width: 22px;
+  height: 22px;
+}
