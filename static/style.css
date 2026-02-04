@@ -1,82 +1,91 @@
 body {
   margin: 0;
+  padding: 0;
   font-family: Arial, sans-serif;
-  background-color: #ffd6ea; /* baby pink */
+  background-color: #ffc0cb;
 }
 
 .container {
-  max-width: 520px;
-  margin: 10px auto;
-  text-align: center;
-  background-color: #ffd6ea;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
 }
 
+/* Main GIF */
 .gif {
-  width: 360px;
-  height: 360px;
+  width: 340px;
+  height: 340px;
   object-fit: cover;
   margin-top: 10px;
+  pointer-events: none;
 }
 
-.question-row {
-  margin-top: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 6px;
-}
-
-.question-text {
+/* Message text */
+.message-line {
+  margin-top: 10px;
   font-size: 22px;
   font-weight: bold;
+  text-align: center;
 }
 
-.icon-small {
-  width: 26px;
-  height: 26px;
-}
-
-#message {
-  margin-top: 15px;
-  min-height: 60px;
-}
-
-#message-line1,
-#message-line2 {
-  margin: 4px 0;
-  font-size: 16px;
-}
-
-.buttons-row {
+/* Question row */
+.question-row {
   margin-top: 20px;
+  text-align: center;
+}
+
+/* Fancy question text */
+#question-text {
+  font-size: 46px;
+  font-weight: bold;
+  font-family: "Pacifico", cursive;
+  margin: 0;
+}
+
+.buttons {
+  margin-top: 16px;
   display: flex;
-  justify-content: center;
-  gap: 16px;
+  justify-content: center;  /* center in the row */
+  align-items: center;
+  gap: 24px;                /* space between buttons */
+  position: relative;
+  height: 150px;
 }
 
 .btn {
+  padding: 12px 22px;
+  font-size: 18px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
   display: inline-flex;
   align-items: center;
-  gap: 4px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  padding: 8px 18px;
-  font-size: 16px;
-  font-weight: bold;
+  justify-content: center;
+  gap: 6px;
+  position: relative;
+  min-width: 110px;         /* NEW: reserve some width */
+  box-sizing: border-box;   /* good practice */
 }
 
-.yes-btn {
-  background-color: #7CFC00; /* green */
-  color: black;
-}
 
-.no-btn {
-  background-color: #ff4d4d; /* red */
+/* Yes button */
+.btn.yes {
+  background-color: #28a745;
   color: white;
 }
 
-.icon-btn {
-  width: 22px;
-  height: 22px;
+/* No button */
+.btn.no {
+  background-color: #dc3545;
+  color: white;
+  border: 2px solid #dc3545;
+}
+
+/* Emoji icons */
+.icon-small {
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
 }
