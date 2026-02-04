@@ -1,46 +1,46 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>Will you be my Valentine?</title>
+  <meta charset="UTF-8">
+  <title>Be My Valentine</title>
   <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+  <!-- Fancy font for the question -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
 </head>
 <body>
   <div class="container">
-    <!-- GIF area -->
+    <!-- Main GIF -->
     <img id="main-gif" class="gif"
-         src="{{ url_for('static', filename='img/Please.GIF') }}"
+         src="{{ url_for('static', filename='img/please.GIF') }}"
          alt="Valentine GIF">
 
-    <!-- Question -->
+    <!-- Message lines -->
+    <div id="msg-line-1" class="message-line"></div>
+    <div id="msg-line-2" class="message-line"></div>
+
+    <!-- Question + buttons -->
     <div id="question-row" class="question-row">
-      <span class="question-text">Will you be my Valentine?</span>
-      <img src="{{ url_for('static', filename='img/rose.png') }}" class="icon-small">
-      <img src="{{ url_for('static', filename='img/heart.png') }}" class="icon-small">
-    </div>
+      <p id="question-text">Will you be my Valentine?</p>
+      <div class="buttons">
+        <button id="yes-btn" class="btn yes">
+          Yes
+          <img src="{{ url_for('static', filename='img/loved.png') }}" class="icon-small">
+          <img src="{{ url_for('static', filename='img/kiss.png') }}" class="icon-small">
+        </button>
 
-    <!-- Message area -->
-    <div id="message">
-      <div id="message-line1"></div>
-      <div id="message-line2"></div>
-    </div>
-
-    <!-- Buttons -->
-    <div class="buttons-row">
-      <button id="yes-btn" class="btn yes-btn">
-        <span>Yes</span>
-        <img src="{{ url_for('static', filename='img/loved.png') }}" class="icon-btn">
-        <img src="{{ url_for('static', filename='img/kiss.png') }}" class="icon-btn">
-      </button>
-
-      <button id="no-btn" class="btn no-btn">
-        <span>No</span>
-        <img src="{{ url_for('static', filename='img/crying.png') }}" class="icon-btn">
-        <img src="{{ url_for('static', filename='img/heartbreak.png') }}" class="icon-btn">
-      </button>
+        <button id="no-btn" class="btn no">
+          No
+          <img src="{{ url_for('static', filename='img/crying.png') }}" class="icon-small">
+          <img src="{{ url_for('static', filename='img/heartbreak.png') }}" class="icon-small">
+        </button>
+      </div>
     </div>
   </div>
 
+  <!-- JS -->
   <script src="{{ url_for('static', filename='script.js') }}"></script>
 </body>
 </html>
